@@ -1,0 +1,74 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo",
+      "sdkFolder": "C:\\Users\\qin\\AppData\\Local\\Android\\Sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\build\\intermediates",
+      "gradleModulePathName": ":app",
+      "moduleRootFolder": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app",
+      "makeFile": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\src\\main\\cpp\\CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "compilerSettingsCacheFolder": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\.cxx",
+      "cxxFolder": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx",
+      "ndkFolder": "C:\\Users\\qin\\AppData\\Local\\Android\\Sdk\\ndk\\21.1.6352462",
+      "ndkVersion": "21.1.6352462",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [
+      "-DANDROID_PLATFORM\u003dandroid-23",
+      "-DANDROID_STL\u003dc++_shared",
+      "-DANDROID_ARM_NEON\u003dTRUE"
+    ],
+    "cFlagList": [],
+    "cppFlagsList": [
+      "-std\u003dc++11 -frtti -fexceptions -Wno-format"
+    ],
+    "variantName": "debug",
+    "soFolder": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\build\\intermediates\\cmake\\debug\\lib",
+    "objFolder": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\build\\intermediates\\cmake\\debug\\obj",
+    "jsonFolder": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cmake\\debug",
+    "gradleBuildOutputFolder": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cxx\\debug",
+    "isDebuggableEnabled": true,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "ARMEABI_V7A",
+  "abiPlatformVersion": 21,
+  "cxxBuildFolder": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cmake\\debug\\armeabi-v7a",
+  "jsonFile": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\android_gradle_build.json",
+  "gradleBuildOutputFolder": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cxx\\debug\\armeabi-v7a",
+  "objFolder": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\build\\intermediates\\cmake\\debug\\obj\\armeabi-v7a",
+  "buildCommandFile": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\build_command.txt",
+  "buildOutputFile": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\build_output.txt",
+  "modelOutputFile": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\build_model.json",
+  "cmake": {
+    "cmakeListsWrapperFile": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cxx\\debug\\armeabi-v7a\\CMakeLists.txt",
+    "toolchainWrapperFile": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cxx\\debug\\armeabi-v7a\\android_gradle_build.toolchain.cmake",
+    "buildGenerationStateFile": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cxx\\debug\\armeabi-v7a\\build_generation_state.json",
+    "cacheKeyFile": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cxx\\debug\\armeabi-v7a\\compiler_cache_key.json",
+    "compilerCacheUseFile": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cxx\\debug\\armeabi-v7a\\compiler_cache_use.json",
+    "compilerCacheWriteFile": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cxx\\debug\\armeabi-v7a\\compiler_cache_write.json",
+    "toolchainSettingsFromCacheFile": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cxx\\debug\\armeabi-v7a\\compiler_settings_cache.cmake",
+    "cmakeWrappingBaseFolder": "."
+  },
+  "jsonGenerationLoggingRecordFile": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\json_generation_record.json",
+  "compileCommandsJsonFile": "D:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cmake\\debug\\armeabi-v7a\\compile_commands.json"
+}
