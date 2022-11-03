@@ -10,7 +10,7 @@ Detecting CXX compiler ABI info
 Detecting CXX compiler ABI info - done
 Detecting CXX compile features
 Detecting CXX compile features - done
-opencv dir: D:/PaddleOCR-release-2.1/deploy/android_demo/app/src/main/cpp/../../../OpenCV/sdk/native/jni
-Found OpenCV: D:/PaddleOCR-release-2.1/deploy/android_demo/app/OpenCV (found version "4.2.0") 
+opencv dir: D:/Android_demo/app/src/main/cpp/../../../OpenCV/sdk/native/jni
+Found OpenCV: D:/Android_demo/app/OpenCV (found version "4.2.0") 
 OpenCV libraries: opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio
 Configuring done

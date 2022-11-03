@@ -10,6 +10,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+        <com.baidu.paddle.lite.demo.ocr.MyButton
+            android:id="@+id/click2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:text="点击跳转"
+            android:theme="@android:style/Theme.Translucent" />
         <LinearLayout
                 android:id="@+id/v_input_info"
                 android:layout_width="fill_parent"
@@ -30,13 +37,10 @@
 <!--                    android:layout_weight="1"-->
 <!--                    android:onClick="btn_load_model_click"-->
 <!--                    android:text="加载模型" />-->
-                <Button
-                    android:id="@+id/btn_run_model"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="btn_run_model_click"
-                    android:text="运行模型" />
+                <!--                    android:onClick="btn_run_model_click"-->
+                    android:background="@android:color/transparent"
+                    android:theme="@android:style/Theme.Translucent"
+                    android:text="运行" />
 <!--                <Button-->
 <!--                    android:id="@+id/btn_take_photo"-->
 <!--                    android:layout_width="0dp"-->
@@ -44,13 +48,7 @@
 <!--                    android:layout_weight="1"-->
 <!--                    android:onClick="btn_take_photo_click"-->
 <!--                    android:text="拍照识别" />-->
-                <Button
-                    android:id="@+id/btn_choice_img"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="btn_choice_img_click"
-                    android:text="选取图片" />
+
 
             </LinearLayout>
             <TextView
@@ -79,6 +77,11 @@
                 android:singleLine="false"
                 android:maxLines="6"
                 android:text="STATUS: ok"/>
+
+            <Button
+                android:id="@+id/btn_run_model"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
 

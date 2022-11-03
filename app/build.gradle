@@ -3,19 +3,25 @@ import java.security.MessageDigest
 apply plugin: 'com.android.application'
 
 android {
-  //  compileSdkVersion 29
+    //  compileSdkVersion 29
     compileSdkVersion rootProject.ext.versionCompiler
     defaultConfig {
-        applicationId "com.baidu.paddle.lite.demo.ocr"
-        // minSdkVersion 23
-       // targetSdkVersion 29
-       // versionCode 1
-       // versionName "1.0"
+//        applicationId "com.jiangdg.usbcamera"
+//        // minSdkVersion 23
+//       // targetSdkVersion 29
+//       // versionCode 1
+//       // versionName "1.0"
+//        minSdkVersion rootProject.ext.minSdkVersion
+//        targetSdkVersion rootProject.ext.versionTarget
+//        versionCode rootProject.ext.versionCode
+//        versionName rootProject.ext.versionNameString
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        applicationId "com.jiangdg.usbcamera"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.versionTarget
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionNameString
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
                 cppFlags "-std=c++11 -frtti -fexceptions -Wno-format"
@@ -28,7 +34,7 @@ android {
             ldLibs "jnigraphics"
         }
         packagingOptions {
-        //    exclude 'lib/armeabi-v7a/libuvc.so'
+            //    exclude 'lib/armeabi-v7a/libuvc.so'
             pickFirst 'lib/armeabi-v7a/libUVCCamera.so'
             pickFirst 'lib/armeabi-v7a/libuvc.so'
             pickFirst 'lib/armeabi-v7a/libusb100.so'
@@ -55,17 +61,31 @@ android {
 }
 
 dependencies {
+//    implementation fileTree(include: ['*.jar'], dir: 'libs')
+//   // implementation 'androidx.appcompat:appcompat:1.1.0'
+//    implementation "androidx.appcompat:appcompat:${androidXVersion}"
+//    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+//    implementation 'com.google.android.material:material:1.1.0'
+//    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+//    implementation 'androidx.navigation:navigation-ui:2.2.2'
+//    testImplementation 'junit:junit:4.12'
+//    implementation 'com.github.Liuguihong:AndroidUVCCamera:1.0.0'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+//    implementation 'com.jakewharton:butterknife:10.2.0'
+//    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+//    implementation project(':libusbcamera')
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-   // implementation 'androidx.appcompat:appcompat:1.1.0'
+
     implementation "androidx.appcompat:appcompat:${androidXVersion}"
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    implementation 'com.github.Liuguihong:AndroidUVCCamera:1.0.0'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
     implementation 'com.jakewharton:butterknife:10.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+
     implementation project(':libusbcamera')
+
+
 }
 
 def archives = [

@@ -16,8 +16,8 @@ CMAKE SERVER: {
     "major": 1,
     "minor": 1
   },
-  "sourceDirectory": "D:/PaddleOCR-release-2.1/deploy/android_demo/app/src/main/cpp",
-  "buildDirectory": "D:/PaddleOCR-release-2.1/deploy/android_demo/app/.cxx/cmake/release/arm64-v8a",
+  "sourceDirectory": "D:/Android_demo/app/src/main/cpp",
+  "buildDirectory": "D:/Android_demo/app/.cxx/cmake/release/arm64-v8a",
   "generator": "Ninja"
 }
 
@@ -37,19 +37,20 @@ CMAKE SERVER: {
   "type": "configure",
   "cacheArguments": [
     "",
-    "-DCMAKE_CXX_FLAGS\u003d-std\u003dc++11 -frtti -fexceptions -Wno-format",
-    "-DCMAKE_FIND_ROOT_PATH\u003dD:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\.cxx\\cmake\\release\\prefab\\arm64-v8a\\prefab",
-    "-DCMAKE_BUILD_TYPE\u003dRelease",
-    "-DCMAKE_TOOLCHAIN_FILE\u003dC:\\Users\\qin\\AppData\\Local\\Android\\Sdk\\ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake",
     "-DANDROID_ABI\u003darm64-v8a",
+    "-DANDROID_PLATFORM\u003dandroid-21",
+    "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dD:\\Android_demo\\app\\build\\intermediates\\cmake\\release\\obj\\arm64-v8a",
+    "-DCMAKE_BUILD_TYPE\u003dRelease",
     "-DANDROID_NDK\u003dC:\\Users\\qin\\AppData\\Local\\Android\\Sdk\\ndk\\21.1.6352462",
-    "-DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a",
-    "-DCMAKE_ANDROID_NDK\u003dC:\\Users\\qin\\AppData\\Local\\Android\\Sdk\\ndk\\21.1.6352462",
-    "-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON",
-    "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dD:\\PaddleOCR-release-2.1\\deploy\\android_demo\\app\\build\\intermediates\\cmake\\release\\obj\\arm64-v8a",
-    "-DCMAKE_MAKE_PROGRAM\u003dC:\\Users\\qin\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+    "-DCMAKE_CXX_FLAGS\u003d-std\u003dc++11 -frtti -fexceptions -Wno-format",
     "-DCMAKE_SYSTEM_NAME\u003dAndroid",
-    "-DCMAKE_SYSTEM_VERSION\u003d23",
+    "-DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a",
+    "-DCMAKE_SYSTEM_VERSION\u003d21",
+    "-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON",
+    "-DCMAKE_ANDROID_NDK\u003dC:\\Users\\qin\\AppData\\Local\\Android\\Sdk\\ndk\\21.1.6352462",
+    "-DCMAKE_TOOLCHAIN_FILE\u003dC:\\Users\\qin\\AppData\\Local\\Android\\Sdk\\ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake",
+    "-G Ninja",
+    "-DCMAKE_MAKE_PROGRAM\u003dC:\\Users\\qin\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
     "-DANDROID_PLATFORM\u003dandroid-23",
     "-DANDROID_STL\u003dc++_shared",
     "-DANDROID_ARM_NEON\u003dTRUE"
@@ -270,52 +271,32 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"opencv dir: D:/PaddleOCR-release-2.1/deploy/android_demo/app/src/main/cpp/../../../OpenCV/sdk/native/jni","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"opencv dir: D:/Android_demo/app/src/main/cpp/../../../OpenCV/sdk/native/jni","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
-CMAKE SERVER: opencv dir: D:/PaddleOCR-release-2.1/deploy/android_demo/app/src/main/cpp/../../../OpenCV/sdk/native/jni
-CMAKE SERVER: opencv dir: D:/PaddleOCR-release-2.1/deploy/android_demo/app/src/main/cpp/../../../OpenCV/sdk/native/jni
+CMAKE SERVER: opencv dir: D:/Android_demo/app/src/main/cpp/../../../OpenCV/sdk/native/jni
+CMAKE SERVER: opencv dir: D:/Android_demo/app/src/main/cpp/../../../OpenCV/sdk/native/jni
 CMAKE SERVER: 
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Error at CMakeLists.txt:18 (find_package):\n  By not providing \"FindOpenCV.cmake\" in CMAKE_MODULE_PATH this project has\n  asked CMake to find a package configuration file provided by \"OpenCV\", but\n  CMake did not find one.\n\n  Could not find a package configuration file provided by \"OpenCV\" with any\n  of the following names:\n\n    OpenCVConfig.cmake\n    opencv-config.cmake\n\n  Add the installation prefix of \"OpenCV\" to CMAKE_PREFIX_PATH or set\n  \"OpenCV_DIR\" to a directory containing one of the above files.  If \"OpenCV\"\n  provides a separate development package or SDK, be sure it has been\n  installed.\n\n","title":"Error","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Found OpenCV: D:/Android_demo/app/OpenCV (found version \"4.2.0\") ","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
-CMAKE SERVER: CMake Error at D:\PaddleOCR-release-2.1\deploy\android_demo\app\src\main\cpp\CMakeLists.txt:18 (find_package):
-  By not providing "FindOpenCV.cmake" in CMAKE_MODULE_PATH this project has
-  asked CMake to find a package configuration file provided by "OpenCV", but
-  CMake did not find one.
+CMAKE SERVER: Found OpenCV: D:/Android_demo/app/OpenCV (found version "4.2.0") 
+CMAKE SERVER: Found OpenCV: D:/Android_demo/app/OpenCV (found version "4.2.0") 
+CMAKE SERVER: 
 
-  Could not find a package configuration file provided by "OpenCV" with any
-  of the following names:
+CMAKE SERVER: [== "CMake Server" ==[
 
-    OpenCVConfig.cmake
-    opencv-config.cmake
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"OpenCV libraries: opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio","type":"message"}
 
-  Add the installation prefix of "OpenCV" to CMAKE_PREFIX_PATH or set
-  "OpenCV_DIR" to a directory containing one of the above files.  If "OpenCV"
-  provides a separate development package or SDK, be sure it has been
-  installed.
+CMAKE SERVER: ]== "CMake Server" ==]
 
-CMAKE SERVER: CMake Error at D:\PaddleOCR-release-2.1\deploy\android_demo\app\src\main\cpp\CMakeLists.txt:18 (find_package):
-  By not providing "FindOpenCV.cmake" in CMAKE_MODULE_PATH this project has
-  asked CMake to find a package configuration file provided by "OpenCV", but
-  CMake did not find one.
-
-  Could not find a package configuration file provided by "OpenCV" with any
-  of the following names:
-
-    OpenCVConfig.cmake
-    opencv-config.cmake
-
-  Add the installation prefix of "OpenCV" to CMAKE_PREFIX_PATH or set
-  "OpenCV_DIR" to a directory containing one of the above files.  If "OpenCV"
-  provides a separate development package or SDK, be sure it has been
-  installed.
-
+CMAKE SERVER: OpenCV libraries: opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio
+CMAKE SERVER: OpenCV libraries: opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio
 CMAKE SERVER: 
 
 CMAKE SERVER: [== "CMake Server" ==[
@@ -328,20 +309,76 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Configuring incomplete, errors occurred!\nSee also \"D:/PaddleOCR-release-2.1/deploy/android_demo/app/.cxx/cmake/release/arm64-v8a/CMakeFiles/CMakeOutput.log\".","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Configuring done","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
-CMAKE SERVER: Configuring incomplete, errors occurred!
-See also "D:/PaddleOCR-release-2.1/deploy/android_demo/app/.cxx/cmake/release/arm64-v8a/CMakeFiles/CMakeOutput.log".
-CMAKE SERVER: Configuring incomplete, errors occurred!
-See also "D:/PaddleOCR-release-2.1/deploy/android_demo/app/.cxx/cmake/release/arm64-v8a/CMakeFiles/CMakeOutput.log".
+CMAKE SERVER: Configuring done
+CMAKE SERVER: Configuring done
 CMAKE SERVER: 
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","errorMessage":"Configuration failed.","inReplyTo":"configure","type":"error"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","type":"reply"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
-CMAKE SERVER: Configuration failed.
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"type":"compute"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","progressCurrent":1000,"progressMaximum":1000,"progressMessage":"Generating","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","message":"Generating done","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Generating done
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"type":"cmakeInputs"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"buildFiles":[{"isCMake":true,"isTemporary":false,"sources":["C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystem.cmake.in","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCCompiler.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-C.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCXXCompiler.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-CXX.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCCompiler.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompilerABI.c","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCXXCompiler.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake","C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageMessage.cmake"]},{"isCMake":false,"isTemporary":false,"sources":["CMakeLists.txt","C:/Users/qin/AppData/Local/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake","C:/Users/qin/AppData/Local/Android/Sdk/ndk/21.1.6352462/build/cmake/platforms.cmake","C:/Users/qin/AppData/Local/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake","../../../OpenCV/sdk/native/jni/OpenCVConfig-version.cmake","../../../OpenCV/sdk/native/jni/OpenCVConfig.cmake","../../../OpenCV/sdk/native/jni/abi-arm64-v8a/OpenCVConfig.cmake","../../../OpenCV/sdk/native/jni/abi-arm64-v8a/OpenCVModules.cmake","../../../OpenCV/sdk/native/jni/abi-arm64-v8a/OpenCVModules-release.cmake"]},{"isCMake":false,"isTemporary":true,"sources":["../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeSystem.cmake","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeCCompiler.cmake","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/feature_tests.c","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/feature_tests.c","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/feature_tests.c","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeCCompiler.cmake","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/feature_tests.cxx","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/feature_tests.cxx","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/feature_tests.cxx","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/feature_tests.cxx","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"]}],"cmakeRootDirectory":"C:/Users/qin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10","cookie":"","inReplyTo":"cmakeInputs","sourceDirectory":"D:/Android_demo/app/src/main/cpp","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"type":"codemodel"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"configurations":[{"name":"Release","projects":[{"buildDirectory":"D:/Android_demo/app/.cxx/cmake/release/arm64-v8a","name":"Project","sourceDirectory":"D:/Android_demo/app/src/main/cpp","targets":[{"artifacts":["D:/Android_demo/app/build/intermediates/cmake/release/obj/arm64-v8a/libNative.so"],"buildDirectory":"D:/Android_demo/app/.cxx/cmake/release/arm64-v8a","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -Wno-format -ffast-math -Ofast -Os -fvisibility=hidden -fvisibility-inlines-hidden -fdata-sections -ffunction-sections -O2 -DNDEBUG  -fPIC  ","defines":["Native_EXPORTS"],"includePath":[{"path":"D:/Android_demo/app/src/main/cpp/../../../PaddleLite/cxx/include"},{"isSystem":true,"path":"D:/Android_demo/app/OpenCV/sdk/native/jni/include"}],"isGenerated":false,"language":"CXX","sources":["native.cpp","ocr_clipper.cpp","ocr_cls_process.cpp","ocr_crnn_process.cpp","ocr_db_post_process.cpp","ocr_ppredictor.cpp","ppredictor.cpp","predictor_input.cpp","predictor_output.cpp","preprocess.cpp"]}],"fullName":"libNative.so","linkFlags":"-Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -Wl,--build-id -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments  -Wl,--gc-sections -Wl,-z,nocopyreloc","linkLibraries":"D:\\Android_demo\\app\\src\\main\\cpp\\..\\..\\..\\PaddleLite\\cxx\\libs\\arm64-v8a\\libpaddle_light_api_shared.so D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_calib3d.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_core.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_dnn.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_features2d.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_flann.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_highgui.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_imgcodecs.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_imgproc.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_ml.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_objdetect.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_photo.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_stitching.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_video.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_videoio.a -lGLESv2 -lEGL -ljnigraphics -llog D:\\Android_demo\\app\\OpenCV\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibprotobuf.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_imgcodecs.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibjpeg-turbo.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibwebp.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibpng.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibtiff.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibjasper.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libIlmImf.a -landroid -llog -lmediandk D:\\Android_demo\\app\\OpenCV\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libquirc.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_calib3d.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_features2d.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_flann.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_imgproc.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_core.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libtbb.a -lc -lz D:\\Android_demo\\app\\OpenCV\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libcpufeatures.a D:\\Android_demo\\app\\OpenCV\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libittnotify.a -ldl -lm -llog D:\\Android_demo\\app\\OpenCV\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libtegra_hal.a -latomic -lm","linkerLanguage":"CXX","name":"Native","sourceDirectory":"D:/Android_demo/app/src/main/cpp","sysroot":"C:/Users/qin/AppData/Local/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot","type":"SHARED_LIBRARY"}]}]}],"cookie":"","inReplyTo":"codemodel","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+

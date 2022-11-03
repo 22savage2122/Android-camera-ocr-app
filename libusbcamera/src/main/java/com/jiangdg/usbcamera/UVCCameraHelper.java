@@ -32,8 +32,8 @@ public class UVCCameraHelper {
     public static final String SUFFIX_JPEG = ".jpg";
     public static final String SUFFIX_MP4 = ".mp4";
     private static final String TAG = "UVCCameraHelper";
-    private int previewWidth = 640;
-    private int previewHeight = 480;
+    private int previewWidth = 3264;
+    private int previewHeight = 2448;
     public static final int FRAME_FORMAT_YUYV = UVCCamera.FRAME_FORMAT_YUYV;
     // Default using MJPEG
     // if your device is connected,but have no images
@@ -241,7 +241,7 @@ public class UVCCameraHelper {
         List<DeviceFilter> deviceFilters = DeviceFilter
                 .getDeviceFilters(mActivity.getApplicationContext(), R.xml.device_filter);
         if (mUSBMonitor == null || deviceFilters == null)
-//            throw new NullPointerException("mUSBMonitor ="+mUSBMonitor+"deviceFilters=;"+deviceFilters);
+            //            throw new NullPointerException("mUSBMonitor ="+mUSBMonitor+"deviceFilters=;"+deviceFilters);
             return null;
         // matching all of filter devices
         return mUSBMonitor.getDeviceList(deviceFilters);

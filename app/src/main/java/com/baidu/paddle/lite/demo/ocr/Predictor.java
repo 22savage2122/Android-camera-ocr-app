@@ -38,7 +38,7 @@ public class Predictor {
     protected float scoreThreshold = 0.1f;
     protected Bitmap inputImage = null;
     protected Bitmap outputImage = null;
-    protected volatile String outputResult = "";
+    public String outputResult = "";
     protected float preprocessTime = 0;
     protected float postprocessTime = 0;
 
@@ -240,7 +240,7 @@ public class Predictor {
         results = postprocess(results);
         Log.i(TAG, "[stat] Preprocess Time: " + preprocessTime
                 + " ; Inference Time: " + inferenceTime + " ;Box Size " + results.size());
-        drawResults(results);
+        outputResult=drawResults(results);
 
         return true;
     }
@@ -314,22 +314,23 @@ public class Predictor {
         return results;
     }
     //放置结果
-    private void drawResults(ArrayList<OcrResultModel> results) {
+    public String drawResults(ArrayList<OcrResultModel> results) {
         StringBuffer outputResultSb = new StringBuffer("");
         for (int i = 0; i < results.size(); i++) {
             OcrResultModel result = results.get(i);
             StringBuilder sb = new StringBuilder("");
-            sb.append(result.getLabel());
-            sb.append(" ").append(result.getConfidence());
-            sb.append("; Points: ");
-            for (Point p : result.getPoints()) {
-                sb.append("(").append(p.x).append(",").append(p.y).append(") ");
-            }
-            Log.i(TAG, sb.toString()); // show LOG in Logcat panel
+           sb.append(result.getLabel());
+//            sb.append(" ").append(result.getConfidence());
+//            sb.append("; Points: ");
+//            for (Point p : result.getPoints()) {
+//                sb.append("(").append(p.x).append(",").append(p.y).append(") ");
+//            }
+ //           Log.i(TAG, "显示：   "+sb.toString()); // show LOG in Logcat panel
          //   outputResultSb.append(i + 1).append(": ").append(result.getLabel()).append("\n");
             outputResultSb.append(result.getLabel()).append("\n");
         }
         outputResult = outputResultSb.toString();
+        Log.i(TAG, "显示：   "+outputResult);
         outputImage = inputImage;
         Canvas canvas = new Canvas(outputImage);
         Paint paintFillAlpha = new Paint();
@@ -353,6 +354,8 @@ public class Predictor {
             canvas.drawPath(path, paint);
             canvas.drawPath(path, paintFillAlpha);
         }
+        return outputResult;
     }
+
 
 }

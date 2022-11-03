@@ -1,7 +1,7 @@
 Executable : C:\Users\qin\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
 arguments : 
 -C
-D:\PaddleOCR-release-2.1\deploy\android_demo\app\.cxx\cmake\debug\arm64-v8a
+D:\Android_demo\app\.cxx\cmake\debug\arm64-v8a
 Native
 jvmArgs : 
 
